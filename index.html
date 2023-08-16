@@ -21,58 +21,57 @@
         <header class="stats flex h-20 justify-center items-center space-x-5">
           <div class="flex flex-col items-center">
             <div>P1</div>
-            <div>0</div>
+            <div id="player-one-score">0</div>
           </div>
           <div class="flex flex-col items-center">
             <div>Draw</div>
-            <div>0</div>
+            <div id="draw-score">0</div>
           </div>
           <div class="flex flex-col items-center">
             <div>P2</div>
-            <div>0</div>
+            <div id="player-two-score">0</div>
           </div>
         </header>
         <div
           class="board-container flex flex-col flex-1 justify-center items-center"
         >
           <div class="board grid grid-cols-3 grid-rows-3 w-30">
-            <div class="grid-1 grid-item h-22 flex items-center justify-center">
-              1
-            </div>
+            <div
+              class="grid-1 grid-item h-22 flex items-center justify-center"
+              data-point="00"
+            ></div>
             <div
               class="grid-2 grid-item border border-black border-t-0 border-b-0 h-22 flex items-center justify-center"
-            >
-              2
-            </div>
-            <div class="grid-3 grid-item h-22 flex items-center justify-center">
-              3
-            </div>
+              data-point="01"
+            ></div>
+            <div
+              class="grid-3 grid-item h-22 flex items-center justify-center"
+              data-point="02"
+            ></div>
             <div
               class="grid-4 grid-item border border-black border-r-0 border-l-0 h-22 flex items-center justify-center"
-            >
-              4
-            </div>
+              data-point="10"
+            ></div>
             <div
               class="grid-5 grid-item border border-black h-22 flex items-center justify-center"
-            >
-              5
-            </div>
+              data-point="11"
+            ></div>
             <div
               class="grid-6 grid-item border border-r-0 border-l-0 border-black h-22 flex items-center justify-center"
-            >
-              6
-            </div>
-            <div class="grid-7 grid-item h-22 flex items-center justify-center">
-              7
-            </div>
+              data-point="12"
+            ></div>
+            <div
+              class="grid-7 grid-item h-22 flex items-center justify-center"
+              data-point="20"
+            ></div>
             <div
               class="grid-8 grid-item border border-t-0 border-b-0 border-black h-22 flex items-center justify-center"
-            >
-              8
-            </div>
-            <div class="grid-9 grid-item h-22 flex items-center justify-center">
-              9
-            </div>
+              data-point="21"
+            ></div>
+            <div
+              class="grid-9 grid-item h-22 flex items-center justify-center"
+              data-point="22"
+            ></div>
           </div>
         </div>
       </div>
@@ -82,16 +81,18 @@
           <i class="fa-solid fa-user neonText"></i>
         </div>
         <div class="logo-container">
-          <img
+          <!-- <img
             src="/src/images/logo.svg"
             class="logo"
             alt="logo"
             draggable="false"
-          />
+          /> -->
         </div>
         <div class="bottom-controls flex">
           <div class="flex flex-col items-center">
-            <i class="fa-solid fa-user-group neonText"></i>
+            <button class="two-player-button">
+              <i class="fa-solid fa-user-group neonText"></i>
+            </button>
             <p class="neonText">2 players</p>
           </div>
 
@@ -103,7 +104,8 @@
         </div>
       </div>
     </main>
-
+    <script src="./src/scripts/Matrix.js"></script>
+    <script src="./src/scripts/store.js"></script>
     <script src="./src/scripts/index.js"></script>
   </body>
 </html>
