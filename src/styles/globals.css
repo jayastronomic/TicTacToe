@@ -4,7 +4,6 @@ html {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 * {
@@ -13,6 +12,10 @@ html {
 
 button {
   border: none;
+}
+
+.app-wrapper {
+  border: 1px solid black;
 }
 
 .block {
@@ -129,4 +132,63 @@ button {
 
 .space-x-2 > * + * {
   margin-left: 0.5rem;
+}
+.space-x-5 > * + * {
+  margin-left: 1.25rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vh;
+}
+
+.w-30 {
+  width: 20rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-22 {
+  height: 6rem;
+}
+.border-black {
+  border-color: rgb(0 0 0);
+}
+
+.border {
+  border-width: 1px;
+  border: solid;
+}
+
+.border-t-0 {
+  border-top: none;
+}
+
+.border-b-0 {
+  border-bottom: none;
+}
+
+.border-r-0 {
+  border-right: none;
+}
+
+.border-l-0 {
+  border-left: none;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
