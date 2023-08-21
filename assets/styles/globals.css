@@ -1,0 +1,211 @@
+body,
+html,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.868);
+  font-family: elemental;
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 2px 5px gray, 2px 2px 5px wheat;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
+
+@font-face {
+  font-family: elemental;
+  src: url("../fonts/Begex.ttf");
+}
+.grid-item {
+  border: 1px white solid;
+}
+
+.app-wrapper {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.static {
+  position: static;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.stick {
+  position: sticky;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-11 {
+  padding: 2.75rem;
+}
+
+.p-12 {
+  padding: 3rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.space-x-1 > * + * {
+  margin-left: 0.25rem;
+}
+
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+.space-x-5 > * + * {
+  margin-left: 1.25rem;
+}
+
+.space-x-7 > * + * {
+  margin-left: 3.5rem;
+}
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vh;
+}
+
+.w-30 {
+  width: 20rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-22 {
+  height: 6rem;
+}
+.border-black {
+  border-color: rgb(0 0 0);
+}
+
+.border {
+  border-width: 1px;
+  border: solid;
+}
+
+.border-t-0 {
+  border-top: none;
+}
+
+.border-b-0 {
+  border-bottom: none;
+}
+
+.border-r-0 {
+  border-right: none;
+}
+
+.border-l-0 {
+  border-left: none;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
