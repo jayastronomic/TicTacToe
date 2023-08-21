@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/globals.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <main class="app-wrapper relative flex flex-col h-full overflow-hidden">
+      <div class="content">
+        <header class="stats space-x-7">
+          <div class="flex flex-col items-center">
+            <div class="score-titles p-1">P1</div>
+            <div id="player-one-score">0</div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="">Draw</div>
+            <div id="draw-score">0</div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="score-titles p-2">P2</div>
+            <div id="player-two-score">0</div>
+          </div>
+        </header>
+        <div class="game-info">
+          <div>Turn</div>
+          <div class="info">
+            <div></div>
+          </div>
+        </div>
+        <div class="play-again-banner-container">
+          <div class="play-again-banner-wrapper">
+            <div class="play-again-banner">PLAY AGAIN?</div>
+            <div class="flex space-x-5">
+              <button class="yes-btn">Yes</button>
+              <button class="no-btn">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="board-container">
+          <audio id="x-sound" src="../assets/SFX/x.wav"></audio>
+          <div class="board grid grid-cols-3 grid-rows-3 w-30">
+            <div
+              class="grid-item-1 grid-item h-22 flex items-center justify-center"
+              data-point="00"
+            ></div>
+            <div
+              class="grid-item-2 grid-item h-22 flex items-center justify-center"
+              data-point="01"
+            ></div>
+            <div
+              class="grid-item-3 grid-item h-22 flex items-center justify-center"
+              data-point="02"
+            ></div>
+            <div
+              class="grid-item-4 grid-item h-22 flex items-center justify-center"
+              data-point="10"
+            ></div>
+            <div
+              class="grid-item-5 grid-item h-22 flex items-center justify-center"
+              data-point="11"
+            ></div>
+            <div
+              class="grid-item-6 grid-item h-22 flex items-center justify-center"
+              data-point="12"
+            ></div>
+            <div
+              class="grid-item-7 grid-item h-22 flex items-center justify-center"
+              data-point="20"
+            ></div>
+            <div
+              class="grid-item-8 grid-item sh-22 flex items-center justify-center"
+              data-point="21"
+            ></div>
+            <div
+              class="grid-item-9 grid-item h-22 flex items-center justify-center"
+              data-point="22"
+              tabindex="0"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL-->
+      <div class="modal">
+        <div class="home">
+          <div class="top-controls">
+            <i class="fa-solid fa-volume-off neonText"></i>
+            <i class="fa-solid fa-user neonText"></i>
+          </div>
+          <div class="logo-container"></div>
+          <div class="bottom-controls flex">
+            <div class="flex flex-col items-center">
+              <button class="two-player-button">
+                <audio
+                  id="two-player-sound"
+                  src="../assets/SFX/zap.mp3"
+                ></audio>
+                <i class="fa-solid fa-user-group neonText"></i>
+              </button>
+              <p class="neonText">2 players</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <button class="online-button">
+                <i class="fa-solid fa-globe neonText"></i>
+              </button>
+              <p class="neonText">Online</p>
+            </div>
+          </div>
+        </div>
+        <div class="registrations">
+          <form class="registrations-form">
+            <p class="registrations-form-title">Login</p>
+            <div class="registrations-form-wrapper">
+              <div class="registration-fields">
+                <label>username</label>
+                <input type="text" name="username" />
+              </div>
+              <div class="registration-fields">
+                <label>password</label>
+                <input type="password" name="password" />
+              </div>
+              <div class="registration-fields confirm-password">
+                <label>confirm password</label>
+                <input type="password" name="password" />
+              </div>
+              <button type="submit">submit</button>
+              <p class="links">
+                Don't have an account?
+                <span class="sign-up-button">Sign up</span>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="find-player">
+          <div class="find-player-container">
+            <input class="find-player-input" />
+            <button class="find-player-button">Find Player</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../assets/helpers/dynamicFetch.js"></script>
+    <script src="../assets/helpers/queryFunction.js"></script>
+    <script src="../assets/scripts/Matrix.js"></script>
+    <script src="../assets/scripts/store.js"></script>
+    <script src="../assets/scripts/index.js"></script>
+  </body>
+</html>

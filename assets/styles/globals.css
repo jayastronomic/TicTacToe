@@ -1,9 +1,13 @@
 body,
-html {
+html,
+#root {
   margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
+  color: rgba(255, 255, 255, 0.868);
+  font-family: elemental;
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 2px 5px gray, 2px 2px 5px wheat;
 }
 
 * {
@@ -14,8 +18,18 @@ button {
   border: none;
 }
 
+@font-face {
+  font-family: elemental;
+  src: url("../fonts/Begex.ttf");
+}
+.grid-item {
+  border: 1px white solid;
+}
+
 .app-wrapper {
-  border: 1px solid black;
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
 .block {
@@ -137,6 +151,9 @@ button {
   margin-left: 1.25rem;
 }
 
+.space-x-7 > * + * {
+  margin-left: 3.5rem;
+}
 .w-full {
   width: 100%;
 }
