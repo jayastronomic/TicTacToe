@@ -56,6 +56,10 @@ To determine the winner, I implemented a winning logic that checks the game boar
 
 This function iterates through the game board to check for winning patterns. It examines rows, columns, and diagonals to find matching symbols.
 
+### `$(selectorString)`
+
+This is a simplified query function that queries the DOM for nodes. It helps clean up noise in the development experience making code more digestible.
+
 ## Conclusion
 
 Developing this Tic Tac Toe project was an enriching experience that allowed me to apply various technologies and problem-solving strategies. I learned valuable lessons about game development, frontend-backend integration, and the importance of planning and iteration. I look forward to continuing to enhance this project in the future and building upon the skills I've gained.

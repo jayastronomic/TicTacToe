@@ -4,7 +4,6 @@ class Matrix {
     this.virtualMatrix = [[], [], []];
   }
   updateVM = (x, y) => {
-    console.log(this.domMatrix[x][y].firstElementChild);
     this.virtualMatrix[x][y] =
       this.domMatrix[x][y].firstChild.getAttribute("data-marker");
     return this.computeWinner();
