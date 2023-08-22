@@ -201,10 +201,12 @@ i.fa-play {
   padding: 2rem;
 }
 .logo-container {
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1 0 auto;
+  font-size: 7rem;
 }
 
 .logo {
