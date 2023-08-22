@@ -397,6 +397,16 @@ div.score-titles.p-2 {
   padding: 0;
 }
 
+.bounce1 {
+  animation: bounce1 2000ms ease-in-out infinite 0.2s;
+}
+.bounce2 {
+  animation: bounce2 2000ms ease-in-out infinite 0.4s;
+}
+.bounce3 {
+  animation: bounce3 2000ms ease-in-out infinite 0.6s;
+}
+
 @keyframes grow-back {
   0% {
     right: -50%;
@@ -480,5 +490,41 @@ div.score-titles.p-2 {
     opacity: 1;
     background-color: rgb(9, 9, 9);
     filter: blur(0px);
+  }
+}
+
+@keyframes bounce1 {
+  0%,
+  100% {
+    filter: brightness(3);
+    transform: translateY(0px);
+  }
+  50% {
+    filter: brightness(1);
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes bounce2 {
+  0%,
+  100% {
+    filter: brightness(3) contrast(2);
+    transform: translateY(0px);
+  }
+  50% {
+    filter: brightness(1);
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes bounce3 {
+  0%,
+  100% {
+    filter: brightness(3);
+    transform: translateY(0px);
+  }
+  50% {
+    filter: brightness(1);
+    transform: translateY(-7px);
   }
 }
