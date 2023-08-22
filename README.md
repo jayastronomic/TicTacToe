@@ -1,4 +1,3 @@
-```markdown
 # Tic Tac Toe Game README
 
 Welcome to the README for my Tic Tac Toe project! This document will provide an overview of the technologies used, the development process, the problem-solving strategies employed, and details about the game itself.
@@ -60,4 +59,3 @@ This function iterates through the game board to check for winning patterns. It 
 ## Conclusion
 
 Developing this Tic Tac Toe project was an enriching experience that allowed me to apply various technologies and problem-solving strategies. I learned valuable lessons about game development, frontend-backend integration, and the importance of planning and iteration. I look forward to continuing to enhance this project in the future and building upon the skills I've gained.
-```
