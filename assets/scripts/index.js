@@ -62,44 +62,56 @@ $S.registrationForm.onsubmit = async (e) => {
     };
     const authPlayer = await dynamiceFetch("/players", player);
     if (authPlayer.logged_in) {
+      console.log(authPlayer);
       $S.setPlayer(authPlayer);
       $S.registrations.style.display = "none";
       $S.findPlayer.style.display = "flex";
     }
   }
 };
+
+//Find Player
+$S.findPlayerButton.onclick = (e) => {
+  e.preventDefault();
+};
+
 //ADD LISTENERS TO GRID
 $S.board.domMatrix.forEach((row) =>
-  row.forEach((item) => {
-    item.onclick = (e) => {
+  row.forEach((col) => {
+    col.onclick = (e) => {
       const gridItem = e.target;
       if ($S.turns === 9) return;
       if (gridItem.innerHTML) return;
       const [x, y] = gridItem.getAttribute("data-point").split("");
       gridItem.innerHTML = $S.currentMarker.marker;
-      $S.currentMarker.sound().play();
       gridItem.classList.add("grid-item-off");
-      const { winningMarker } = $S.board.updateVM(x, y);
+      const { winningMarker, winningLane } = $S.board.updateVM(x, y);
       $S.turns += 1;
-      console.log(winningMarker, $S.turns);
-      if (winningMarker === "No Winner" && $S.turns === 9) {
+      $S.winner = winningMarker;
+      $S.currentMarker.sound().play();
+      if ($S.winner === "No Winner" && $S.turns === 9) {
         $S.calculateScore(winningMarker);
         $S.gameInfo.innerHTML = "Tie Game";
         $S.info.innerHTML = "";
         return;
       }
-      if (winningMarker === "No Winner") {
+      if ($S.winner === "No Winner") {
         $S.togglePlayerTurn();
         setTimeout(() => ($S.info.innerHTML = $S.playerTurn), 400);
         $S.toggleMarker();
         return;
       }
-
       $S.calculateScore(winningMarker);
+      let i = 1;
       $S.board.domMatrix.forEach((row) =>
-        row.forEach((gridItem) => gridItem.classList.add("grid-item-off"))
+        row.forEach((gridItem) => {
+          gridItem.classList.add("grid-item-off");
+          if (winningLane.includes(gridItem.getAttribute("data-point"))) {
+            gridItem.firstElementChild.classList.add(`bounce${i}`);
+            i++;
+          }
+        })
       );
-
       $S.gameInfo.innerHTML = "WINNER";
       $S.info.innerHTML = $S.winner;
     };

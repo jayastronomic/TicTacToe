@@ -18,6 +18,7 @@ var $S = {
   noButton: $(".no-btn"),
   yesButton: $(".yes-btn"),
   findPlayer: $(".find-player"),
+  findPlayerButton: $(".find-player-button"),
   passwordConfirmation: $(".confirm-password"),
   links: $(".links"),
   registrationForm: $("form"),
@@ -45,7 +46,10 @@ var $S = {
       "<div data-marker='x' class='x-container'><div class='forward-slash'></div><div class='back-slash'></div></div>",
     sound() {
       const audio = document.createElement("audio");
-      audio.src = "../assets/SFX/x.wav";
+      if (this.winner === "x") audio.src = "../assets/SFX/x-win.mp3";
+      if (this.winner !== "x") audio.src = "../assets/SFX/x.wav";
+      if ($S.winner === "No Winner" && $S.turns === 9)
+        audio.src = "../assets/SFX/tie.mp3";
       return audio;
     },
   },
@@ -58,7 +62,8 @@ var $S = {
             "<div data-marker='o' class='o-container'><div class='outer-ring'></div></div>",
           sound() {
             const audio = document.createElement("audio");
-            audio.src = "../assets/SFX/o.wav";
+            if ($S.winner === "o") audio.src = "../assets/SFX/o-win.mp3";
+            if ($S.winner !== "o") audio.src = "../assets/SFX/o.wav";
             return audio;
           },
         })
@@ -67,7 +72,10 @@ var $S = {
             "<div data-marker='x' class='x-container'><div class='forward-slash'></div><div class='back-slash'></div></div>",
           sound() {
             const audio = document.createElement("audio");
-            audio.src = "../assets/SFX/x.wav";
+            if ($S.winner === "x") audio.src = "../assets/SFX/x-win.mp3";
+            if ($S.winner !== "x") audio.src = "../assets/SFX/x.wav";
+            if ($S.winner === "No Winner" && $S.turns === 9)
+              audio.src = "../assets/SFX/tie.mp3";
             return audio;
           },
         });
@@ -121,7 +129,10 @@ var $S = {
         "<div data-marker='x' class='x-container'><div class='forward-slash'></div><div class='back-slash'></div></div>",
       sound() {
         const audio = document.createElement("audio");
-        audio.src = "../assets/SFX/x.wav";
+        if ($S.winner === "x") audio.src = "../assets/SFX/x-win.mp3";
+        if ($S.winner !== "x") audio.src = "../assets/SFX/x.wav";
+        if ($S.winner === "No Winner" && $S.turns === 9)
+          audio.src = "../assets/SFX/tie.mp3";
         return audio;
       },
     };
